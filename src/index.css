@@ -11,3 +11,207 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.flexCenterJustifyColumn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flexAlignCenterColumn {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.app-header {
+  font-size: 36px;
+  line-height: 42px;
+  font-stretch: condensed;
+  display: flex;
+  justify-content: center;
+}
+
+.pictures-layout {
+  margin-top: 30px;
+  width: 95vw;
+  height: 70vh;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  justify-content: space-between;
+}
+
+.image-size {
+  width: 30vw;
+  height: 30vh;
+  cursor: pointer;
+}
+
+.modal-window {
+  background: rgba(0,0,0,0.7);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal-content {
+  background: #fff;
+  width: 65vw;
+}
+
+.close-button {
+  outline: none;
+  border-style: none;
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.comment-input {
+  height: 30px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-top:20px;
+  outline: none;
+  cursor: text;
+  padding-left: 1em;
+}
+
+.submit-input {
+  height: 30px;
+  background: #4997d0;
+  border-radius: 3px;
+  border-style: none;
+  margin-top:20px;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.submit-input::after {
+  cursor: progress;
+}
+
+.comments-display {
+  float: right;
+  width:27%;
+  height: calc(100vh - 60%);
+  position: absolute;
+  right: 22%;
+  margin-top:2.5%;
+  margin-bottom: 10px;
+}
+
+.empty-comments-icon {
+  position: relative;
+  top: 55%;
+  left: 41%;
+}
+
+.empty-comments-text {
+  position: relative;
+  top: 60%;
+  right: 2%;
+  font-size: 1.2vw
+}
+
+.image-full {
+  margin-top:3%;
+  margin-left: 3%;
+  width:50%;
+  height:50%;
+}
+
+.form-control {
+  width:50%;
+  margin-left: 3%;
+  margin-top:1%;
+  display: flex;
+  flex-direction: column;
+}
+div {
+  overflow: auto;
+}
+
+@media screen and (max-width: 450px) {
+  .modal-content {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .image-full {
+    margin-top:0%;
+    margin-left: 0%;
+    width:100vw;
+    height:auto;
+  }
+
+  .close-button {
+    position: absolute;
+    background:transparent;
+    right: 0;
+    top:0;
+  }
+
+  .comments-display {
+    width:100%;
+    max-height: 30vh;
+    position: absolute;
+    margin-top:2.5%;
+    margin-bottom: 10px;
+    right: 0;
+    top:36.5vh;
+    left: 5vw;
+  }
+
+  .form-control {
+    margin-top:35vh;
+    width: 90vw;
+    margin-left:5vw;
+  }
+
+  .pictures-layout {
+    width: 85vw;
+    height: 100vh;
+    grid-template-columns: 100vw;
+  }
+
+  .image-size {
+    width: inherit;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .empty-comments-icon {
+    position: relative;
+    top: 30%;
+    left: 30%;
+  }
+
+  .empty-comments-text {
+    position: relative;
+    top: 40%;
+    right:20%;
+    font-size: 16px
+  }
+}
